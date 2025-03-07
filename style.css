@@ -11,20 +11,23 @@ Version: 1.0
 ./* HEADER */
 .site-header {
     background-color: #fff; /* Fond blanc */
-    padding: 20px 0; /* Ajoute un peu d'espace autour du header */
 }
 
 .container {
     display: flex;
     justify-content: space-between; /* Logo à gauche, menu à droite */
     align-items: center;
-    max-width: 1200px;
+    max-width: 1440px;
+    max-height: 80px;
     margin: 0 auto; /* Centre le header */
+    padding-top: 30px;
+    padding-left: 146px;
+    padding-right: 214px;
 }
 
 .site-logo img {
-    max-height: 60px; /* Ajuste la taille du logo */
-    width: auto; /* Préserve les proportions du logo */
+    max-height: 14px;
+    max-width: auto; /* Préserve les proportions du logo */
 }
 
 .main-navigation {
@@ -33,28 +36,20 @@ Version: 1.0
 
 .header-menu {
     list-style: none; /* Supprime les puces de la liste */
-    padding: 0; /* Supprime le padding par défaut */
-    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; 
+    margin: 0; 
     display: flex; /* Affiche les éléments horizontalement */
 }
 
 .header-menu li {
-    margin-left: 30px; /* Espacement entre les éléments du menu */
+    margin-left: 45px; /* Espacement entre les éléments du menu */
 }
 
 .header-menu li a {
     text-decoration: none;
-    color: #333; /* Couleur du texte */
+    color: #000000;
+    font-family: Space Mono;
     font-size: 16px;
-    font-weight: 600; /* Mettre les liens en gras pour plus de visibilité */
-    text-transform: uppercase; /* Majuscules pour le texte */
-    padding: 10px 15px; /* Espace autour du texte */
-    transition: all 0.3s ease; /* Transition douce pour les effets */
-}
-
-/* Effet au survol des éléments du menu */
-.header-menu li a:hover {
-    background-color: #f1f1f1; /* Ajoute un fond léger au survol */
-    color: #000; /* Change la couleur du texte au survol */
-    border-radius: 5px; /* Bords arrondis au survol */
+    font-weight: 400; 
+    text-transform: uppercase; 
 }
