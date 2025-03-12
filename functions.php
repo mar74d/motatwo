@@ -41,3 +41,7 @@ function motatwo_enqueue_scripts() {
 }
 add_action('wp_enqueue_scripts', 'motatwo_enqueue_scripts');
 
+function register_footer_menu() {
+    register_nav_menu('footer-menu', __('Menu Footer', 'theme-textdomain'));
+}
+add_action('after_setup_theme', 'register_footer_menu');
