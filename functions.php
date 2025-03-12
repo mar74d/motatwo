@@ -30,3 +30,14 @@ function motatwo_enqueue_styles() {
     wp_enqueue_style('motatwo-style', get_stylesheet_uri());
 }
 add_action('wp_enqueue_scripts', 'motatwo_enqueue_styles');
+
+// Enregistrer et lier le fichier JavaScript
+
+function motatwo_enqueue_scripts() {
+    // Enqueue le style principal
+    wp_enqueue_style('motatwo-style', get_stylesheet_uri());
+    // Enqueue le script JS
+    wp_enqueue_script('motatwo-scripts', get_template_directory_uri() . '/scripts.js', array(), false, true);
+}
+add_action('wp_enqueue_scripts', 'motatwo_enqueue_scripts');
+

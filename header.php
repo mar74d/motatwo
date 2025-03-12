@@ -24,6 +24,13 @@
                 ?>
             </div>
 
+            <!-- Menu Burger -->
+            <div class="menu-toggle" id="menu-toggle">
+                <span class="burger-bar"></span>
+                <span class="burger-bar"></span>
+                <span class="burger-bar"></span>
+            </div>
+
             <!-- Menu -->
             <nav class="main-navigation">
                 <?php
