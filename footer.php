@@ -21,5 +21,16 @@
 </footer>
 
 <?php wp_footer(); ?>
+
+
+<?php
+/**
+ * Lien pour appeler la modale de contact
+ */
+?>
+
+<?php get_template_part('templates-parts/modale-contact'); ?>
+
+
 </body>
 </html>

@@ -65,7 +65,7 @@ Version: 1.0
 .header-menu li a {
     text-decoration: none;
     color: #000;
-    font-family: Space Mono;
+    font-family: SpaceMono;
     font-size: 16px;
     font-weight: 400;
     text-transform: uppercase;
@@ -210,15 +210,242 @@ Version: 1.0
         height: auto;
         padding: 10px 0;
         flex-direction: column;
+        align-items: center;
     }
 
     .footer-menu {
         flex-direction: column;
         align-items: center;
+        width: 200px;
     }
 
-    .copyright {
-        margin-top: 10px;
-        text-align: center;
+    footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+
     }
+    .copyright {
+        margin-top: 30px;
+        text-align: center;
+        width: 200px;
+        margin-left: 0;
+    }
+}
+
+/******************************************************POPUP*************************************************************/
+
+/* Masquer la modale par défaut */
+.contact-popup-overlay {
+    display: none; /* Cachée au chargement */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond sombre */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Conteneur de la modale */
+.contact-popup {
+    position: relative;
+    margin: 10% auto;
+    background-color: #fff;
+    width: 597px;
+    height: 769px;
+    border: 5px solid #000; /* Bordure noire */
+    overflow: hidden;
+    transform: scale(0.8); /* Réduction initiale pour effet d’apparition */
+    transition: transform 0.3s ease;
+}
+
+/* Affichage de la modale avec animation */
+.contact-popup-overlay.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* La croix pour fermer la popup n'apparait pas sur la maquette*/
+.popup-close {
+    display: none;
+}
+
+/* Image en haut avec largeur dépassant la modale */
+.contact-popup-img {
+    height: 106px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.popup-header {
+    width: 885px;
+    height: 106px;
+    display: block;
+    margin: auto;
+    margin-left: -23%;
+    padding-top: 18px;
+    padding-bottom: 45px;
+}
+
+/* Conteneur du formulaire */
+.wpcf7.js {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centrer le formulaire horizontalement */
+    width: 263px;
+    margin: 5px auto; /* Centré avec un petit espacement vertical */
+}
+
+/* Libellés des champs */
+.wpcf7-form.init label {
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #313144;
+    align-self: flex-start; /* Alignement à gauche */
+}
+
+/* Champs du formulaire */
+.wpcf7-form-control.wpcf7-text {
+    width: 263px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #B8BBC2;
+    font-family: Poppins;
+    font-size: 12px;
+    padding: 8px;
+    margin-bottom: 10px;
+    margin-top: 6px;
+    align-self: stretch; /* Prend toute la largeur du formulaire */
+}
+
+/* Champ message avec hauteur spécifique */
+.wpcf7-form-control.wpcf7-textarea {
+    width: 263px;
+    height: 210px;
+    border-radius: 8px;
+    border: 1px solid #B8BBC2;
+    font-family: Poppins;
+    font-size: 12px;
+    padding: 8px;
+    align-self: stretch; /* Prend toute la largeur du formulaire */
+}
+
+/* Bouton d'envoi */
+.wpcf7-form-control.wpcf7-submit.has-spinner {
+    width: 263px;
+    height: 50px;
+    border: solid 0px;
+    border-radius: 2px;
+    background-color: #D8D8D8;
+    padding: 8px 15px;
+    font-family: SpaceMono;
+    font-weight: 400;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+
+    /* Conteneur de la modale */
+.contact-popup {
+    position: relative;
+    margin: 10% auto;
+    background-color: #fff;
+    width: 286px;
+    height: 583px;
+    border: 3px solid #000; /* Bordure noire */
+    overflow: hidden;
+    transform: scale(0.8); /* Réduction initiale pour effet d’apparition */
+    transition: transform 0.3s ease;
+}
+
+/* Image en haut avec largeur dépassant la modale */
+.contact-popup-img {
+    height: 55px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.popup-header {
+    width: 459px;
+    max-height: 20px;
+    display: block;
+    margin-left: -23%;
+    padding-top: 18px;
+}
+
+/* Conteneur du formulaire */
+.wpcf7.js {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centrer le formulaire horizontalement */
+    width: 190px;
+}
+
+/* Libellés des champs */
+.wpcf7-form.init label {
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #313144;
+    align-self: flex-start; /* Alignement à gauche */
+}
+
+/* Champs du formulaire */
+.wpcf7-form-control.wpcf7-text {
+    width: 190px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #B8BBC2;
+    font-family: Poppins;
+    font-size: 12px;
+    padding: 4px;
+    margin-bottom: -1px;
+    align-self: stretch; /* Prend toute la largeur du formulaire */
+}
+
+/* Champ message avec hauteur spécifique */
+.wpcf7-form-control.wpcf7-textarea {
+    width: 190px;
+    height: 149px;
+    border-radius: 8px;
+    border: 1px solid #B8BBC2;
+    font-family: Poppins;
+    font-size: 12px;
+    padding: 4px;
+    align-self: stretch; /* Prend toute la largeur du formulaire */
+}
+
+/* Bouton d'envoi */
+.wpcf7-form-control.wpcf7-submit.has-spinner {
+    width: 190px;
+    height: 50px;
+    border: solid 0px;
+    border-radius: 2px;
+    background-color: #D8D8D8;
+    padding: 8px 15px;
+    font-family: SpaceMono;
+    font-weight: 400;
+    font-size: 12px;
+    cursor: pointer;
+}
+
 }
