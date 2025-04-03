@@ -93,7 +93,7 @@ Version: 1.0
         cursor: pointer;
         position: absolute;
         top: 50%;
-        right: 20%;
+        right: 10%;
         transform: translateY(-50%);
         z-index: 1001;
     }
@@ -162,7 +162,13 @@ Version: 1.0
         text-align: center;
         display: block;
     }
+
+    .container {
+        padding-left: 40px!important;
+    }
 }
+
+
 
 /******************************************************FOOTER********************************************************/
 
